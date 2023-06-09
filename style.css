@@ -1,0 +1,246 @@
+/* * {
+    border: 1px solid orange;
+} */
+
+.page-wrapper {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1600px;
+}
+
+.cards {
+    background-image: url(./img/poker-table-background.webp);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.card1, .card2, .card3, .card4, .card5 {
+    background-color: white;
+    border-radius: 15px;
+    border: 1px solid rgb(228, 224, 224);
+    height: 15rem;
+    width: 10rem;
+}
+
+/* CORNER SUIT SYMBOLS */
+.card1:before,
+.card1:after {
+  position: absolute;
+  content:"♥A";
+  font-size: 2em;
+}
+
+.card1:before {
+  text-align: center;
+  top: 0.4em;
+  left: 0.5em;
+}
+.card1:after {
+  bottom: 0.4em;
+  right: 0.5em;
+  transform: rotate(180deg);
+}
+
+.card2:before,
+.card2:after {
+  position: absolute;
+  content:"♠A";
+  font-size: 2em;
+}
+
+.card2:before {
+  text-align: center;
+  top: 0.4em;
+  left: 0.5em;
+}
+.card2:after {
+  bottom: 0.4em;
+  right: 0.5em;
+  transform: rotate(180deg);
+}
+
+.card3:before,
+.card3:after {
+  position: absolute;
+  content:"♣A";
+  font-size: 2em;
+}
+
+.card3:before {
+  text-align: center;
+  top: 0.4em;
+  left: 0.5em;
+}
+.card3:after {
+  bottom: 0.4em;
+  right: 0.5em;
+  transform: rotate(180deg);
+}
+
+.card4:before,
+.card4:after {
+  position: absolute;
+  content:"♦A";
+  font-size: 2em;
+}
+
+.card4:before {
+  text-align: center;
+  top: 0.4em;
+  left: 0.5em;
+}
+.card4:after {
+  bottom: 0.4em;
+  right: 0.5em;
+  transform: rotate(180deg);
+}
+
+.card5:before,
+.card5:after {
+  position: absolute;
+  content:"♠8";
+  font-size: 2em;
+}
+
+.card5:before {
+  text-align: center;
+  top: 0.4em;
+  left: 0.5em;
+}
+.card5:after {
+  bottom: 0.4em;
+  right: 0.5em;
+  transform: rotate(180deg);
+}
+
+/* CARD POSITIONING */
+.card1 {
+    transform: rotate(-20deg);
+    position: absolute;
+    top: 270px;
+    left: 220px;
+    z-index: 1;
+}
+
+.card2 {
+    transform: rotate(-15deg);
+    position: absolute;
+    top: 250px;
+    left: 280px;
+    z-index: 2;
+}
+
+.card3 {
+    position: absolute;
+    top: 240px;
+    left: 340px;
+    z-index: 3;
+}
+
+.card4 {
+    transform: rotate(15deg);
+    position: absolute;
+    top: 250px;
+    left: 400px;
+    z-index: 4;
+}
+
+.card5 {
+    transform: rotate(20deg);
+    position: absolute;
+    top: 270px;
+    left: 460px;
+    z-index: 5;
+}
+
+.card1, .card4 {
+    color: red;
+    box-shadow: 2px 2px rgb(177, 175, 175);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.card2, .card3, .card5 {
+    color: black;
+    box-shadow: 2px 2px rgb(177, 175, 175);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+/* NOT ALIGNING CENTRE VERTICALLY */
+.card1 p {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-size: 4rem;
+}
+
+.card2 p {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-size: 4rem;
+}
+
+.card3 p {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-size: 4rem;
+}
+
+.card4 p {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-size: 4rem;
+}
+
+.card5 p {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-size: 4rem;
+}
+
+/* ANIMATION */
+@keyframes card-pop-up {
+    0% {
+        transform: none;
+    }
+    5% {
+        z-index: 6;
+    }
+    100% {
+        transform: scale(1.25);
+        z-index: 6;
+    }
+}
+
+.card1:hover {
+    animation: card-pop-up 3s;
+}
+
+.card2:hover {
+    animation: card-pop-up 3s;
+}
+
+.card3:hover {
+    animation: card-pop-up 3s;
+}
+
+.card4:hover {
+    animation: card-pop-up 3s;
+}
+
+.card5:hover {
+    animation: card-pop-up 3s;
+}
